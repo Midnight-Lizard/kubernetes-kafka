@@ -15,7 +15,6 @@ spec:
     metadata:
       labels:
         app: kafka
-      annotations:
     spec:
       terminationGracePeriodSeconds: 30
       initContainers:
@@ -48,6 +47,8 @@ spec:
           value: -Dlog4j.configuration=file:/etc/kafka/log4j.properties
         - name: JMX_PORT
           value: "5555"
+        - name: KAFKA_HEAP_OPTS
+          value: -Xms512m -Xmx1G
         ports:
         - name: inside
           containerPort: 9092
@@ -85,4 +86,4 @@ spec:
       storageClassName: kafka-broker
       resources:
         requests:
-          storage: 200Gi
+          storage: 10Gi
