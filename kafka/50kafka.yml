@@ -48,7 +48,7 @@ spec:
         - name: JMX_PORT
           value: "5555"
         - name: KAFKA_HEAP_OPTS
-          value: -Xms512m -Xmx1G
+          value: -Xms512m -Xmx800m
         ports:
         - name: inside
           containerPort: 9092

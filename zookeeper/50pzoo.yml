@@ -17,7 +17,6 @@ spec:
       labels:
         app: zookeeper
         storage: persistent
-      annotations:
     spec:
       terminationGracePeriodSeconds: 10
       initContainers:
