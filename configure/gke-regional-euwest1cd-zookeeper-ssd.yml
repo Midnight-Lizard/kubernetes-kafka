@@ -6,6 +6,4 @@ provisioner: kubernetes.io/gce-pd
 reclaimPolicy: Retain
 allowVolumeExpansion: true
 parameters:
-  type: pd-ssd
-  replication-type: regional-pd
-  zones: europe-west1-c, europe-west1-d
+  type: pd-standard
