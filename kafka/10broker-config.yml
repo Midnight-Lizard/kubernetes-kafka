@@ -120,6 +120,10 @@ data:
     transaction.state.log.replication.factor=1
     transaction.state.log.min.isr=1
 
+    ########################## Timestamp config ################################
+    message.timestamp.type=LogAppendTime
+    log.message.timestamp.type=LogAppendTime
+
     ############################# Log Flush Policy #############################
 
     # Messages are immediately written to the filesystem but by default we only fsync() to sync
